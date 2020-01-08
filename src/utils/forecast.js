@@ -17,7 +17,7 @@ const forecast = (latitude, longitude, callback) => {
         }
         const currently = body.currently;
         const today = body.daily.data[0];
-        callback(undefined, `${today.summary} Mamy obecnie ${currently.temperature} stopni celcjusza. Szansa na deszcz wynosi ${currently.precipProbability}%.`);
+        callback(undefined, `${today.summary} Mamy obecnie ${currently.temperature} stopni celcjusza. Szansa na deszcz wynosi ${currently.precipProbability}%. Minimalna temperatura w ciągu dnia wyniesie ${today.temperatureMin}, zaś maksymalna ${today.temperatureMax}.`);
     });
 };
 
